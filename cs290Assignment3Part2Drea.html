@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<script src="cs290Assignment3Part2Scripts.js"></script>
+
+<head>
+    <title>Untitled Page</title>
+</head>
+<body>
+
+<form action="http://web.engr.oregonstate.edu/~osterbit/2/repo/class-content/form_tests/Formtest.php" method="get">
+		<fieldset>
+		<legend>Gists Search:</legend> 
+		Number of Pages:
+          <br />
+          <br />
+          <select onChange='handleSelection(this)'>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          </select>
+		<hr />
+		Language:
+          <br />
+          <br />
+		<form action="">
+          <input type="checkbox" name="language" value="Python" onclick='handleClick1(this)'/>Python<br />
+          <input type="checkbox" name="language" value="JSON" onclick='handleClick2(this)'/>JSON<br />
+          <input type="checkbox" name="language" value="JavaScript" onclick='handleClick3(this)'/>JavaScript<br />
+          <input type="checkbox" name="language" value="SQL" onclick='handleClick4(this)'/>SQL<br />
+          </form>
+		<hr />
+
+         <button type="button" onclick='searchButtonResults()'>Search</button>
+
+		</fieldset>
+</form>
+
+<hr />
+<p>
+Search Results
+
+<!-- display the results below in the div -->
+
+<div id="resultsDiv"></div>
+</p>
+<hr />
+
+<p>
+<button type="button" onclick='addToFavorites()'>Add to Favorites</button>
+</p>
+
+<hr />
+<p>
+Favorites
+<br />
+<div id="favoritesDiv"></div>
+</p>
+<hr />
+
+<script type="text/javascript">
+    fillFavorites();
+</script>
+
+<p>
+<button type="button" onclick='removeFromFavorites()'>Remove from Favorites</button>
+<button type="button" onclick='removeAllFromFavorites()'>Remove All from Favorites</button>
+</p>
+<hr />
+
+</body>
+</html>
